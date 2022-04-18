@@ -11,7 +11,7 @@ export default function Home() {
         <Navbar />
       </div>
       <div className={styles.h1}>
-        <h1>Gaming-Headphone Shop</h1>
+        <h1>Book Shop</h1>
       </div>
       <div className={styles.row}>
         <div></div>
@@ -20,16 +20,16 @@ export default function Home() {
           <div className={styles.box}>
             <Image
               
-              src="/k5.jpg"
+              src="/book3.jpg"
               alt="my picture"
-              width={200}
+              width={250}
               height={200}
             />
             <div className={styles.p}>
-              <a href="/k5" className={styles.card}>
-                <p> หูฟัง Gaming รุ่น K5 Blue - Black </p>
+              <a href="/book3" className={styles.card}>
+                <p>  Harry Potter Book Set </p>
               </a>
-              <h2>$19.66</h2>
+              <h2>$101.46</h2>
             </div>
           </div>
           <br></br>
@@ -38,16 +38,16 @@ export default function Home() {
             <div className={styles.box}>
               <Image
                 
-                src="/k5.jpg"
+                src="/book3.jpg"
                 alt="my picture"
-                width={200}
+                width={250}
                 height={200}
               />
               <div className={styles.p}>
-                <a href="/k5" className={styles.card}>
-                  <p> หูฟัง Gaming รุ่น K5 Blue - Black </p>
+                <a href="/book3" className={styles.card}>
+                  <p>  Harry Potter Book Set </p>
                 </a>
-                <h2>$19.66</h2>
+                <h2>$101.46</h2>
               </div>
             </div>
           {/* </div> */}
@@ -57,14 +57,14 @@ export default function Home() {
           <div className={styles.box}>
             <Image
               
-              src="/ega.jpg"
+              src="/book_gameoff.jpg"
               alt="my picture"
               width={200}
               height={200}
             />
             <div className={styles.p}>
-              <a href="/ega" className={styles.card}>
-                <p> หูฟัง Gaming รุ่น EGA Type-H6 - Black </p>
+              <a href="/book_gameoff" className={styles.card}>
+                <p> เกมล่าบัลลังก์ (A Game of Thrones) </p>
               </a>
               <h2>$18</h2>
             </div>
@@ -75,14 +75,14 @@ export default function Home() {
             <div className={styles.box}>
               <Image
                 
-                src="/ega.jpg"
+                src="/book_gameoff.jpg"
                 alt="my picture"
                 width={200}
                 height={200}
               />
               <div className={styles.p}>
-                <a href="/ega" className={styles.card}>
-                  <p> หูฟัง Gaming รุ่น EGA Type-H6 - Black </p>
+                <a href="/book_gameoff" className={styles.card}>
+                  <p> เกมล่าบัลลังก์ (A Game of Thrones) </p>
                 </a>
                 <h2>$18</h2>
               </div>
@@ -94,14 +94,14 @@ export default function Home() {
           <div className={styles.box}>
             <Image
               
-              src="/signo.jpg"
+              src="/book_davin.jpg"
               alt="my picture"
-              width={200}
+              width={325}
               height={200}
             />
             <div className={styles.p}>
-              <a href="/signo" className={styles.card}>
-                <p> หูฟัง Gaming รุ่น Signo - Black </p>
+              <a href="/book_davin" className={styles.card}>
+                <p> The Da Vinci Code </p>
               </a>
               <h2>$16</h2>{" "}
             </div>
@@ -112,14 +112,14 @@ export default function Home() {
             <div className={styles.box}>
               <Image
                 
-                src="/signo.jpg"
+                src="/book_davin.jpg"
                 alt="my picture"
-                width={200}
+                width={325}
                 height={200}
               />
               <div className={styles.p}>
-                <a href="/signo" className={styles.card}>
-                  <p> หูฟัง Gaming รุ่น Signo - Black </p>
+                <a href="/book_davin" className={styles.card}>
+                  <p> The Da Vinci Code </p>
                 </a>
                 <h2>$16</h2>{" "}
               </div>

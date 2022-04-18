@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
+/* @import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur"); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -9,15 +12,19 @@
   box-sizing: border-box;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Style the header */
 .header {
-  /* background-color: LightGray; */
-  background-color: rgb(54, 54, 54);
-  color: #bdbdbd;
+  /* background-color: #6aaa96; */
+  background-color: #6aaa96;
+  color: #ffffff;
   padding: 15px;
   text-align: center;
   font-size: 20px;
@@ -55,7 +62,7 @@
 /* Create three equal columns that sits next to each other */
 .column1 {
   text-align: center;
-  background-color: LightGray;
+  background-color: #6aaa96;
   -webkit-flex: 1;
   color: #f1f1f1;
   -ms-flex: 1;
@@ -66,7 +73,7 @@
 .column2 {
   color: #f1f1f1;
   text-align: center;
-  background-color: LightGray;
+  background-color: #6aaa96;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -76,7 +83,7 @@
 .column3 {
   color: #f1f1f1;
   text-align: center;
-  background-color: LightGray;
+  background-color: #6aaa96;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -105,6 +112,7 @@
 }
 .h1 {
   text-align: center;
+  color: #6aaa96;
 }
 .h2 {
   text-align: center;
@@ -112,17 +120,19 @@
 
 .log {
   text-align: center;
-  background-color: #fff;
+  background-color: #6aaa96;
   border-radius: 10px;
+  color:rgb(255, 255, 255);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   width: auto;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 .regis {
-  background-color: #fff;
+  background-color: #6aaa96;
+  color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(248, 248, 248, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   width: auto;
   padding-bottom: 20px;
   padding-top: 20px;

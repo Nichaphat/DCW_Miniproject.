@@ -95,8 +95,20 @@ export default function Login({ token }) {
             >
               sign up
             </button>
+            <button
+              className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button"
+            >
+              sigSmall
+            </button>
             <button className={styles.buttonregis} onClick={login}>
               sign in
+            </button>
+            <button
+              className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button"
+            >
+              Small
             </button>
           </div>
         </div>
