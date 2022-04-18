@@ -18,12 +18,16 @@ export default function Login({ token }) {
       let result = await axios.post(
         `${config.URL}/login`,
         { username, password, ischeck },
-        { withCredentials: true }
+        { withCredentials: true },
+       
       );
+   
       console.log("result: ", result);
       console.log("result.data:  ", result.data);
       console.log("token:  ", token);
       setStatus("login success");
+
+     
     } catch (e) {
       console.log("error: ", JSON.stringify(e.response));
       setStatus(JSON.stringify(e.response).substring(0, 80) + "...");
@@ -35,24 +39,38 @@ export default function Login({ token }) {
     });
 
   const loginForm = () => (
-    <div class={styles.gridContainer}>
-      <div className={styles.form}>
+    <div >
+      <div >
         <div>
+          <label
+            class="block text-slate-200  text-sm font-sold mb-2 pt-4"
+            for="username"
+          >
+            Username
+          </label>
+
           <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
             type="text"
-            name="username"
             placeholder="Username"
             onChange={(e) => setUsername(e.target.value)}
-          />
+          ></input>
         </div>
-
         <div>
+          <label
+            class="block text-slate-200 text-sm font-sold mb-2"
+            for="password"
+          >
+            Password
+          </label>
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
+            class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             onChange={(e) => setPassword(e.target.value)}
-          />
+            id="password"
+            type="password"
+            placeholder="******************"
+          ></input>
         </div>
       </div>
     </div>
@@ -60,60 +78,51 @@ export default function Login({ token }) {
 
   return (
     <Layout>
-      <div className={styles.header}>
-        <Navbar />
-      </div>
-      <Head>
-        <title>Login</title>
-      </Head>
-      <div className={styles.container}>
-        <div className={styles.log}>
-          <h1>Login</h1>
+      <Navbar />
+    
+      <div class=" flex justify-center mt-20">
+        <div class="H-20 w-30 rounded overflow-hidden shadow-lg">
 
-          <div>
-            <p>
+       
+        <form class="bg-[#6aaa96] shadow-md rounded px-10 pt-15 pb-8 mb-15 ">
+          <div class="mb-4">{loginForm()}</div>
+          <div class="mb-6">
+            <p class="text-slate-200">
               check: {ischeck}
               <br></br>
             </p>
             {status}
-          </div>
 
-          {loginForm()}
-          <div>
-            <input
-              type="checkbox"
-              name="IsRememberMe"
-              onChange={(e) => setRemember(e.target.value)}
-            />
-            <p>Remember me!</p>
+            <div>
+              <input
+                type="checkbox"
+                name="IsRememberMe"
+                onChange={(e) => setRemember(e.target.value)}
+              />
+              <p class="text-slate-200">Remember me!</p>
+            </div>
           </div>
-
-          <div>
+          <div class="flex items-center justify-between">
             <button
-              className={styles.buttonregisup}
+              class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+              onClick={login}
+            >
+              Sign In
+            </button>
+            <button
+              class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
               onClick={() => rergisform()}
             >
-              sign up
-            </button>
-            <button
-              className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-              type="button"
-            >
-              sigSmall
-            </button>
-            <button className={styles.buttonregis} onClick={login}>
-              sign in
-            </button>
-            <button
-              className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-              type="button"
-            >
-              Small
+              Register
             </button>
           </div>
-        </div>
+        </form>
+      </div>
       </div>
     </Layout>
+   
   );
 }
 

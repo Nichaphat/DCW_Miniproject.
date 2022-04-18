@@ -31,39 +31,46 @@ export default function Home({ token }) {
   };
   return (
     <Layout>
-      <div className={styles.header}>
-        <Navbar />
-      </div>
-      <Head>
-        <title>First Page</title>
-      </Head>
+      <Navbar />
       <div className={styles.container}>
-        <h3> Product detail </h3>
-        <Image
-          className={styles.immage}
-          src="/book3.jpg"
-          alt="my picture"
-          width={300}
-          height={300}
-        />
-        <h3>
-        Harry Potter Book Set <t></t>
-          <button onClick={copyText}> Copy </button>
-        </h3>
-       <p>
-       Harry Potter – ปฏิเสธไม่ได้ว่าหากนึกถึงหนังสือนิยายที่ได้รับความนิยมไปทั่วโลกมากเป็นอันดับต้นๆ  <br></br>
-       ชื่อของ Harry Potters จะต้องติดอันดับอยู่เสมอ เป็นผลงานจากปลายปากกาของ เจ. เค. โรว์ลิ่ง  <br></br>
-       นักเขียนชาวอังกฤษที่ต้องยอมรับเลยว่าเป็นหนังสือที่ทำให้ทุกคนรู้จักเหล่าบรรดาพ่อมดแม่มดน้อยอย่างแท้จริง  <br></br>
-       โด่งดังถึงขนาดว่าเอาไปทำเป็นภาพยนตร์กี่เล่มก็ประสบความสำเร็จแทบทั้งหมดนอกจากนี้ยังถือเป็น  <br></br>
-       หนังสือนิยายที่มียอดขายสูงติดอันดับตลอดกาลกว่า 400 ล้านเล่มทั่วโลก  <br></br>
-       </p>
-        <br></br>
-        <div style={style}>
-          <a href="/productsbook3" className={styles.card}>
-            <h3>To cart</h3>
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <div class="px-6 py-4">
+            <div class="text-center font-sold text-xl mb-2">product details</div>
+            <div class="bg-indigo-300 ...">
+              <Image
+                className={styles.immage}
+                src="/book3.jpg"
+                alt="my picture"
+                width={340}
+                height={250}
+              />
+            </div>
+            <p class="text-gray-700 text-base">
+              Harry Potter –
+              ปฏิเสธไม่ได้ว่าหากนึกถึงหนังสือนิยายที่ได้รับความนิยมไปทั่วโลกมากเป็นอันดับต้นๆ
+              ชื่อของ Harry Potters จะต้องติดอันดับอยู่เสมอ
+              เป็นผลงานจากปลายปากกาของ เจ. เค. โรว์ลิ่ง
+              นักเขียนชาวอังกฤษที่ต้องยอมรับเลยว่าเป็นหนังสือที่ทำให้ทุกคนรู้จักเหล่าบรรดาพ่อมดแม่มดน้อยอย่างแท้จริง
+              โด่งดังถึงขนาดว่าเอาไปทำเป็นภาพยนตร์กี่เล่มก็ประสบความสำเร็จแทบทั้งหมดนอกจากนี้ยังถือเป็น
+              หนังสือนิยายที่มียอดขายสูงติดอันดับตลอดกาลกว่า 400 ล้านเล่มทั่วโลก
+            </p>
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-sold py-2 px-2 rounded-full"
+              onClick={copyText}
+            >
+              Copy
+            </button>
+          </div>
+
+          <a
+            class="inline-block border border-white rounded py-1 px-3 bg-[#6aaa96] text-white"
+            href="/productsbook3"
+          >
+            to cart
           </a>
         </div>
       </div>
+      ...
       <br></br>
     </Layout>
   );

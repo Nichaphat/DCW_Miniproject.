@@ -15,28 +15,32 @@ export default function Home({ token }) {
     setProducts(product.data);
   };
 
-  const paymoney = () => Router.push({ pathname: "/Paymenysuccessbook_gameoff" });
+  const paymoney = () =>
+    Router.push({ pathname: "/Paymenysuccessbook_gameoff" });
 
   return (
     <Layout>
-      <div className={styles.header}> <Navbar /></div>
-      <Head>
-        <title>First Page</title>
-      </Head>
+      <Navbar />
       <div className={styles.h1}>
-        <br></br>  <br></br>
-        <h1>Payment</h1>   </div>
-        <br></br>
-        <div className={styles.image}>
-          <Image  src="/book_gameoff.jpg" alt="my picture" width={200} height={200} />
-          <p>   เกมล่าบัลลังก์ (A Game of Thrones)</p>
-          <h2> $18 </h2>
-        
-            <button className={styles.buttonpayment} onClick={() => paymoney()}>Proceed to payment</button>
-          </div>
-          <br></br>
-       
-   
+        <br></br> <br></br>
+        <h1>Payment</h1>{" "}
+      </div>
+      <br></br>
+      <div className={styles.image}>
+        <Image
+          src="/book_gameoff.jpg"
+          alt="my picture"
+          width={200}
+          height={200}
+        />
+        <p> เกมล่าบัลลังก์ (A Game of Thrones)</p>
+        <h2> $18 </h2>
+
+        <button className={styles.buttonpayment} onClick={() => paymoney()}>
+          Proceed to payment
+        </button>
+      </div>
+      <br></br>
     </Layout>
   );
 }

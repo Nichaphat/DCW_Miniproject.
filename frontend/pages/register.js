@@ -42,39 +42,43 @@ export default function Register({ token }) {
   };
 
   const registerForm = () => (
-    <div className={styles.gridContainer}>
-      <div className={styles.form}>
-        <div>
+    <div>
+      <div>
+        <div class="mb-2 ">
           <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="firstname"
             type="text"
-            name="name"
             placeholder="firstname"
             onChange={(e) => setName(e.target.value)}
-          />
+          ></input>
         </div>
 
-        <div>
+        <div class="mb-2">
           <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="lastname"
             type="text"
-            name="surname"
             placeholder="lastname"
             onChange={(e) => setSurname(e.target.value)}
-          />
+          ></input>
         </div>
 
-        <div>
+        <div class="mb-2">
           <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
             type="text"
-            name="username"
             placeholder="username"
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
 
-        <div>
+        <div class="mb-2">
           <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
             type="email"
-            name="email"
             placeholder="email"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -82,8 +86,9 @@ export default function Register({ token }) {
 
         <div>
           <input
-            type="password"
-            name="password"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Password"
+            type="Password"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -97,31 +102,34 @@ export default function Register({ token }) {
     });
 
   return (
-    <Layout> 
-      <div className={styles.header}>
+    <Layout>
       <Navbar />
-      </div>
-      <Head>
-       
-        <title>Register</title>
-      </Head>
-      <div className={styles.container}>
-       
-        <br></br>
-        <br></br>
-        <div className={styles.regis}>
-          <h3>Create Account</h3>
-          <p>Status: {status}</p>
-          <div className={styles.content}>{registerForm()}</div>
-          <br></br>
-          <div>
-            <button className={styles.buttonregisup} onClick={register}>
-              sign up
-            </button>
-            <button className={styles.buttonregis} onClick={() => loginpage()}>
-              sign in
-            </button>
-          </div>
+     
+
+      <div class=" flex justify-center mt-20">
+        <div class="H-20 w-30 rounded overflow-hidden shadow-lg">
+          <form class="bg-[#6aaa96] shadow-md rounded px-10 pt-15 pb-8 mb-15 ">
+            <p class="text-slate-200 pt-5">Create Account</p>
+            <p class="text-slate-200 mb-2">Status: {status}</p>
+            <div class="mb-4">{registerForm()}</div>
+
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={() => loginpage()}
+              >
+                Sign In
+              </button>
+              <button
+                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={register}
+              >
+                Register
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </Layout>
