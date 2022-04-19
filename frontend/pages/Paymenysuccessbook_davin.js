@@ -8,24 +8,32 @@ import Router from "next/router";
 export default function Home({ token }) {
   return (
     <Layout>
-      <div className={styles.header}>
-        {" "}
+    
         <Navbar />
-      </div>
-      <Head>
-        <title>First Page</title>
-      </Head>
+     
+     
       <br></br> <br></br> <br></br> <br></br>
-      <div className={styles.image}>
-        <Image src="/pass.png" alt="my picture" width={200} height={200} />
-        <br></br>
-        <p> The Da Vinci Code</p>
-        <h2>$16 </h2>
-      </div>
-      <div className={styles.h2}>
-        {" "}
-        <h2>Successful payment</h2>
-      </div>
+      <div class="flex justify-center ... mt-20">
+       
+       <div class="max-w-sm rounded overflow-hidden shadow-lg">
+         <div class="px-6 py-4">
+           <div class="justify-center text-center font-bold text-xl mb-2">
+             Successful payment
+           </div>
+           <div className={styles.image}>
+             <Image
+               src="/pass.png"
+               alt="my picture"
+               width={200}
+               height={200}
+             />
+             <br></br>
+             <p>The Da Vinci Code</p>
+             <p class="text-red-600 font-bold">$16</p>
+           </div>
+         </div>
+       </div>
+     </div>
     </Layout>
   );
 }

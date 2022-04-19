@@ -58,24 +58,27 @@ const Products = ({ token }) => {
             <br></br>
             <br></br>
           </div>
-          name: {item.name}
+          <div class="text-center">
+             name: {item.name}
           number: {item.numberproduct}
-          <br></br> <br></br> <br></br>
-          <div>
+          </div>
+         
+          <br></br> <br></br>
+          <div class="text-center ">
             <button
-              className={Styles.buttonproductupdate}
+              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-3"
               onClick={() => updateProducts(item.id)}
             >
               Update
             </button>
             <button
-              className={Styles.buttonproductdelete}
+              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-3"
               onClick={() => deleteProducts(item.id)}
             >
               Delete
             </button>
             <button
-              className={Styles.buttonproductby}
+              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               onClick={() => handleClickIndex()}
             >
               Place an order
@@ -93,7 +96,7 @@ const Products = ({ token }) => {
     <Layout>
       <Navbar />
 
-      <div class="flex justify-center ...">
+      <div class="flex justify-center ... mt-10">
         <div class="H-20 w-30 rounded overflow-hidden shadow-lg">
           {/* <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
           <div class="px-6 py-4">
@@ -117,9 +120,9 @@ const Products = ({ token }) => {
                   placeholder="number"
                   onChange={(e) => setnumberproduct(e.target.value)}
                 ></input>
-                <div>
+                <div class="text-center">
                   <button
-                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-3"
                     onClick={() => addProducts(name, numberproduct)}
                   >
                     add to cart

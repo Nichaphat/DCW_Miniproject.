@@ -8,7 +8,7 @@ export default function Home({ token }) {
   return (
     <Layout>
       <Navbar />
-      <div class="flex justify-center ...">
+      <div class="flex justify-center ... mt-20">
         <div class="max-w-sm rounded overflow-hidden shadow-lg">
           <div class="px-6 py-4">
             <div class="justify-center text-center font-bold text-xl mb-2">

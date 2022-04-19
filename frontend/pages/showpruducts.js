@@ -26,12 +26,11 @@ const product = ({ token }) => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
         <div key={index}>
-           <div className={Styles.image}>
+          <div className={Styles.image}>
             <Image src="/book_gameoff.jpg" width={200} height={200} />
             <br></br>
             <br></br>
           </div>
-      
           name: {item.name}, numberproduct: {item.numberproduct}
         </div>
       ));
@@ -39,15 +38,12 @@ const product = ({ token }) => {
 
   return (
     <Layout>
-      <div className={Styles.header}>
-       <Navbar />
-       </div>
+      <Navbar />
+
       <div className={Styles.container}>
-       
-         <ul>{printProducts()}</ul>
-         <br></br>
+        <ul>{printProducts()}</ul>
+        <br></br>
         {JSON.stringify(products.products)}
-       
       </div>
     </Layout>
   );

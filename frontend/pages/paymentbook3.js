@@ -19,24 +19,28 @@ export default function Home({ token }) {
 
   return (
     <Layout>
-      <div className={styles.header}> <Navbar /></div>
+      <Navbar />
       <Head>
         <title>First Page</title>
       </Head>
       <div className={styles.h1}>
-        <br></br>  <br></br>
-        <h1>Payment</h1>   </div>
-        <br></br>
-        <div className={styles.image}>
-          <Image  src="/book3.jpg" alt="my picture" width={200} height={200} />
-          <p>Harry Potter Book Set</p>
-          <h2> $101.46 </h2>
-        
-            <button className={styles.buttonpayment} onClick={() => paymoney()}>Proceed to payment</button>
-          </div>
-          <br></br>
-       
-   
+        <br></br> <br></br>
+        <h1>Payment</h1>{" "}
+      </div>
+      <br></br>
+      <div className={styles.image}>
+        <Image src="/book3.jpg" alt="my picture" width={200} height={200} />
+        <p>Harry Potter Book Set</p>
+        <h2> $101.46 </h2>
+
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-3"
+          onClick={() => paymoney()}
+        >
+          Proceed to payment
+        </button>
+      </div>
+      <br></br>
     </Layout>
   );
 }

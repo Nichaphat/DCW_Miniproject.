@@ -36,7 +36,10 @@ export default function Home({ token }) {
         <p> เกมล่าบัลลังก์ (A Game of Thrones)</p>
         <h2> $18 </h2>
 
-        <button className={styles.buttonpayment} onClick={() => paymoney()}>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-3"
+          onClick={() => paymoney()}
+        >
           Proceed to payment
         </button>
       </div>
