@@ -13,7 +13,7 @@ export default function Home({ token }) {
     );
     setProducts(product.data);
   };
-  const CodeName = "หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue. ";
+  const CodeName = " Harry Potter";
   const copyText = () => {
     navigator.clipboard.writeText(CodeName);
   };
@@ -54,6 +54,7 @@ export default function Home({ token }) {
               โด่งดังถึงขนาดว่าเอาไปทำเป็นภาพยนตร์กี่เล่มก็ประสบความสำเร็จแทบทั้งหมดนอกจากนี้ยังถือเป็น
               หนังสือนิยายที่มียอดขายสูงติดอันดับตลอดกาลกว่า 400 ล้านเล่มทั่วโลก
             </p>
+            
             <button
               class="bg-red-500 hover:bg-red-700 text-white font-sold py-2 px-2 rounded-full"
               onClick={copyText}
