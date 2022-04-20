@@ -13,7 +13,7 @@ let users = db.users;
 
 
 let products = {
-  list: [{ id: 1, name: " K5 Pro Wired Stereo - Black/Blue", numberproduct: 10 }],
+  list: [{ id: 1, name: "  เกมล่าบัลลังก์ (A Game of Thrones) ", numberproduct: 1 }],
 };
 
 require("./passport.js");

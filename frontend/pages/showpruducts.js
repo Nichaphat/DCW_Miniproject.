@@ -44,6 +44,9 @@ const product = ({ token }) => {
         <ul>{printProducts()}</ul>
         <br></br>
         {JSON.stringify(products.products)}
+        <button class="bg-[#6aaa96] hover:bg-[#6aaa96]-200 text-white font-bold py-2 px-4 rounded">
+          <a href="/login"> Go to Sign In</a>
+        </button>
       </div>
     </Layout>
   );

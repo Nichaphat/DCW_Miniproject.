@@ -8,7 +8,7 @@ const Navbar = () => (
     <nav class="flex items-center justify-between flex-wrap bg-[#6aaa96] p-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
       
-        <span class="font-semibold text-xl tracking-tight">Books Shop</span>
+        <span  class="font-semibold text-xl tracking-tight">Books Shop</span>
       </div>
 
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">

@@ -18,16 +18,13 @@ export default function Login({ token }) {
       let result = await axios.post(
         `${config.URL}/login`,
         { username, password, ischeck },
-        { withCredentials: true },
-       
+        { withCredentials: true }
       );
-   
+
       console.log("result: ", result);
       console.log("result.data:  ", result.data);
       console.log("token:  ", token);
       setStatus("login success");
-
-     
     } catch (e) {
       console.log("error: ", JSON.stringify(e.response));
       setStatus(JSON.stringify(e.response).substring(0, 80) + "...");
@@ -39,8 +36,8 @@ export default function Login({ token }) {
     });
 
   const loginForm = () => (
-    <div >
-      <div >
+    <div>
+      <div>
         <div>
           <label
             class="block text-slate-200  text-sm font-sold mb-2 pt-4"
@@ -79,50 +76,47 @@ export default function Login({ token }) {
   return (
     <Layout>
       <Navbar />
-    
+
       <div class=" flex justify-center mt-20">
         <div class="H-20 w-30 rounded overflow-hidden shadow-lg">
+          <form class="bg-[#6aaa96] shadow-md rounded px-10 pt-15 pb-8 mb-15 ">
+            <div class="mb-4">{loginForm()}</div>
+            <div class="mb-6">
+              <p class="text-slate-200">
+                check: {ischeck}
+                <br></br>
+              </p>
+              {status}
 
-       
-        <form class="bg-[#6aaa96] shadow-md rounded px-10 pt-15 pb-8 mb-15 ">
-          <div class="mb-4">{loginForm()}</div>
-          <div class="mb-6">
-            <p class="text-slate-200">
-              check: {ischeck}
-              <br></br>
-            </p>
-            {status}
-
-            <div>
-              <input
-                type="checkbox"
-                name="IsRememberMe"
-                onChange={(e) => setRemember(e.target.value)}
-              />
-              <p class="text-slate-200">Remember me!</p>
+              <div>
+                <input
+                  type="checkbox"
+                  name="IsRememberMe"
+                  onChange={(e) => setRemember(e.target.value)}
+                />
+                <p class="text-slate-200">Remember me!</p>
+              </div>
             </div>
-          </div>
-          <div class="flex items-center justify-between">
-            <button
-              class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-              onClick={login}
-            >
-              Sign In
-            </button>
-            <button
-              class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-              onClick={() => rergisform()}
-            >
-              Register
-            </button>
-          </div>
-        </form>
-      </div>
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={login}
+              >
+                Sign In
+              </button>
+              <button
+                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={() => rergisform()}
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </Layout>
-   
   );
 }
 
