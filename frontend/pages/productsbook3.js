@@ -59,10 +59,9 @@ const Products = ({ token }) => {
             <br></br>
           </div>
           <div class="text-center">
-             name: {item.name}
-          number: {item.numberproduct}
+            name: {item.name}
+            number: {item.numberproduct}
           </div>
-         
           <br></br> <br></br>
           <div class="text-center ">
             <button
