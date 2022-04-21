@@ -99,14 +99,14 @@ export default function Login({ token }) {
             </div>
             <div class="flex items-center justify-between">
               <button
-                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                class="bg-white  text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={login}
               >
                 Sign In
               </button>
               <button
-                class="bg-white hover:bg-[#6aaa96] text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                class="bg-white  text-black-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={() => rergisform()}
               >
